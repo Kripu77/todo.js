@@ -4,28 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To do application using JS and following the DOM API</title>
+    <title>Document</title>
+    <style>
+        .list-done{
+            text-decoration: line-through;
+        }
+    </style>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div class="container">
-
-        <div class="controls">
-            <h1>My awesome to do</h1>
-            <input type="text" id="inputId">
-            <br>
-            <br>
-            <button type="submit" id="add"> Add To Do</button>
-            <button type="submit" id="remove"> Remove TO Do</button>
-        </div>
-<div class="list">
-
-</div>
    
-    </div>
- 
-    <script src="./todo.js"></script>
+ <div class="container">
+
+ <h1>
+        My to do list
+    </h1>
+      <input type="text" name="list" placeholder="Add Items">
+   <br>
+   <br>
+      <button type="submit" id="add"> Submit</button>
+      <button type="reset" id="remove">Remove</button>
+  
+      <ol>
+        <!-- <li>hello</li> -->
+      </ol>
+      </div>
+  <script src="./todo.js"></script>
 </body>
-
-
 </html>

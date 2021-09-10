@@ -1,36 +1,37 @@
-const a = document.querySelector('#inputId');
-const inputData = a.value;
+const a = document.querySelector("#add");
+const b = document.querySelector('input');
+const c = document.querySelector("#remove");
+const d = document.querySelector("ol");
+
+const e = document.querySelector('li');
+
+a.addEventListener('click', (e)=>{
+     e.preventDefault();
+    
+const newElement = document.createElement('li');
+ const newText = document.createTextNode(b.value);
+newElement.setAttribute('class', 'lists')
+newElement.appendChild(newText);
+    console.log(b.value);
 
 
-const b = document.querySelector('#add');
-const c = document.querySelector('#remove');
-
-const d = document.querySelector('.list');
-
-b.addEventListener('click', (e)=>{
-    e.preventDefault();
-
-const newElement = document.createElement('p');
-// newElement.innerText = inputData;
-const textD = document.createTextNode('ásdasd');
-newElement.classList.add('paragraph');
-newElement.appendChild(textD);
 d.appendChild(newElement);
 
-newElement.addEventListener('click', (e)=>{
-    e.currentTarget.style.textDecoration = "line-through";
-})
+c.addEventListener('click', (e)=>{
 
-c.addEventListener('dblclick', (e)=>{
+for(let i = 0; i<d.children.length; i++){
+    console.log(d.children.length);
 
-
-d.removeChild(newElement);
-})
-
-
-
+d.removeChild(d.children[0]);
+}
 
 })
 
 
+
+})
+
+d.addEventListener('click', (e)=>{
+    e.target.classList.toggle("list-done");
+})
 
